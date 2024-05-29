@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/likenneth/honest_llama.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "fit_interp"]
+	url = https://github.com/fc2869/fit_interp
+	fetch = +refs/heads/*:refs/remotes/fit_interp/*

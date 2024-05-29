@@ -1,0 +1,44 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "mc1_targets": {
+      "choices": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "labels": {
+        "feature": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "mc2_targets": {
+      "choices": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "labels": {
+        "feature": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
