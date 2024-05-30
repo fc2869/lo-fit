@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 ac234917663c33c6c5990b9a8f2539f970c6d30c Fangcong Yin <fcyin@fuji.(none)> 1704253694 +0000	clone: from https://github.com/likenneth/honest_llama.git
-ac234917663c33c6c5990b9a8f2539f970c6d30c d8494fd9e50404a66f61b6a923b8b8d286276555 fcyin <fangcongyin@utexas.edu> 1709138872 +0000	commit: iti codebase
-d8494fd9e50404a66f61b6a923b8b8d286276555 7da17b0c960857873dde2da6d2fc06402d479844 fcyin <fangcongyin@utexas.edu> 1710737083 +0000	commit: remove the [truthful] prefix in test prompts
-7da17b0c960857873dde2da6d2fc06402d479844 750defa9ab83fab9652747dfa89225aa99fddb78 fcyin <fangcongyin@utexas.edu> 1711125706 +0000	commit: log
-750defa9ab83fab9652747dfa89225aa99fddb78 0665a7118a7915690e5cbdce09b5a736a5309367 fcyin <fangcongyin@utexas.edu> 1711148234 +0000	commit: seems to be fixing the inconsistency in iti results

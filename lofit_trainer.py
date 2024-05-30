@@ -63,12 +63,12 @@ output_dir = args.output_dir
 device = args.device
 lofit_heads = args.lofit_heads
 topk_heads = args.use_topk_heads
-head_selection_strategy = args.head_selection
 ### If lofit_heads is not None, assert the heads are stored in a numpy file and load it into a numpy array
 ### Format of the npy file: each row is a tuple of (layer,head); heads are sorted by their importance score from the head selection step in descending order
 if lofit_heads is not None:
     assert '.npy' in lofit_heads
     ### Only use the topk_heads heads
+    print(f'Number of Attention Heads Used For Training: {topk_heads}')
     lofit_heads = np.load(lofit_heads)[:topk_heads,:]
     ### Convert np array to list of tuples
     lofit_heads = list(zip(lofit_heads[:,0], lofit_heads[:,1]))
@@ -299,7 +299,7 @@ if args.lofit_component=='A':
             ahead[i,j] =  np.linalg.norm(trainer.model.model.layers[i].self_attn.attn_A[j].data.cpu().to(torch.float32).numpy())
     f = lambda x: (x//num_heads,x%num_heads)
     k=args.use_topk_heads if args.use_topk_heads is not None else int(0.1*num_heads * num_layers)
-    print(f'Number of Attention Heads Selected: {k}')
+    print(f'Number of Attention Heads Saved to File: {k}')
     if args.lofit_component=='A':
         topk = np.argsort(ahead.flatten())[::-1][:k]
     tuples = f(topk)
@@ -311,9 +311,9 @@ if args.lofit_component=='A':
         os.makedirs(f"./top_heads")
     if args.lofit_component=='A':
         np.save(f"./top_heads/{args.base_model_name}_{args.task}_Aonly_top{k}heads_{args.seed}.npy",np.array(top_tuples))
-
-if args.task == 'truthfulqa':
-    trainer.test(fname=args.output_file_name,eval_dataset = datasets['test'],model_name = args.base_model_name)
-elif args.task in ['mquake','clutrr']:
-    trainer.test(fname=args.output_file_name,task=args.task,eval_dataset = datasets['test'],model_name = args.base_model_name)
+else:       
+    if args.task == 'truthfulqa':
+        trainer.test(fname=args.output_file_name,eval_dataset = datasets['test'],model_name = args.base_model_name)
+    elif args.task in ['mquake','clutrr']:
+        trainer.test(fname=args.output_file_name,task=args.task,eval_dataset = datasets['test'],model_name = args.base_model_name)
 

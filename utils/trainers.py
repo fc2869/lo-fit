@@ -75,7 +75,7 @@ class CustomSFTTrainer(SFTTrainer):
         self.tokenizer.add_eos_token = False
         if not os.path.exists(fname):
             os.makedirs(fname)
-        elif task == 'mquake':
+        if task == 'mquake':
             generated = evaluate_mquake(eval_dataset=eval_dataset,model_name=model_name,model=self.model,tokenizer=self.tokenizer,fname=fname,apply_chat_template=apply_chat_template)
             
         elif task=='clutrr':
