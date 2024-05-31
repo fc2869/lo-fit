@@ -32,7 +32,7 @@ executing==2.0.1
 filelock==3.13.3
 fonttools==4.50.0
 frozenlist==1.4.1
-fsspec==2024.3.1
+fsspec
 gitdb==4.0.11
 GitPython==3.1.43
 h11==0.14.0
@@ -87,7 +87,6 @@ peft==0.10.0
 pexpect==4.9.0
 pickleshare==0.7.5
 pillow==10.2.0
-pkg_resources==0.0.0
 platformdirs==4.2.0
 portalocker==2.8.2
 prompt-toolkit==3.0.43
@@ -153,3 +152,4 @@ xxhash==3.4.1
 yarl==1.9.4
 zipp==3.18.1
 zstandard==0.22.0
+openai
