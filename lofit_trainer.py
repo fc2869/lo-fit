@@ -86,12 +86,16 @@ set_seed(seed)
 
 logging.set_verbosity_error()
 ### Maps of model names and task names
-### TO-DO: Define your models here
+### If you want to use your own model, please add the model name to the map
 models_map = {
-    'llama2-7b-chat': '/data/shared_resources/models/llama2/hf/llama-2-7b-chat',
-    'llama2-7b-base': '/data/shared_resources/models/llama2/hf/llama-2-7b',
-    'llama2-13b-base': '/data/shared_resources/models/llama2/hf/llama-2-13b',
-    'gemma-7b-base': '/data/shared_resources/models/gemma/gemma-7b'
+    'llama2_chat_7B': 'meta-llama/Llama-2-7b-chat-hf', 
+    'llama2_7B': 'meta-llama/Llama-2-7b-hf',
+    'llama2_13B': 'meta-llama/Llama-2-13b-hf', 
+    'gemma_7b': 'google/gemma-7b',
+    # 'llama2-7b-chat': '/data/shared_resources/models/llama2/hf/llama-2-7b-chat',
+    # 'llama2-7b-base': '/data/shared_resources/models/llama2/hf/llama-2-7b',
+    # 'llama2-13b-base': '/data/shared_resources/models/llama2/hf/llama-2-13b',
+    # 'gemma-7b-base': '/data/shared_resources/models/gemma/gemma-7b'
 }
 task_map = {
     'truthfulqa': {

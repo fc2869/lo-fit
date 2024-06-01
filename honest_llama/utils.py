@@ -49,14 +49,19 @@ from honest_llama.truthfulqa.evaluate import format_frame, data_to_dict
 # from truthfulqa.evaluate import format_frame, data_to_dict
 ENGINE_MAP = {
     'llama_7B': 'baffo32/decapoda-research-llama-7B-hf', 
-    'llama2_7B': '/data/shared_resources/models/llama2/hf/llama-2-7b',
     'alpaca_7B': 'circulus/alpaca-7b', 
     'vicuna_7B': 'AlekseyKorshuk/vicuna-7b', 
-    'llama2_chat_7B': '/data/shared_resources/models/llama2/hf/llama-2-7b-chat', 
     'llama2_chat_13B': 'meta-llama/Llama-2-13b-chat-hf', 
-    'llama2_13B': '/data/shared_resources/models/llama2/hf/llama-2-13b',
     'llama2_chat_70B': 'meta-llama/Llama-2-70b-chat-hf', 
-    'gemma_7b': '/data/shared_resources/models/gemma/gemma-7b'
+
+    'llama2_chat_7B': 'meta-llama/Llama-2-7b-chat-hf', 
+    'llama2_7B': 'meta-llama/Llama-2-7b-hf',
+    'llama2_13B': 'meta-llama/Llama-2-13b-hf', 
+    'gemma_7b': 'google/gemma-7b',
+    # 'llama2_chat_7B': '/data/shared_resources/models/llama2/hf/llama-2-7b-chat', 
+    # 'llama2_7B': '/data/shared_resources/models/llama2/hf/llama-2-7b',
+    # 'llama2_13B': '/data/shared_resources/models/llama2/hf/llama-2-13b',
+    # 'gemma_7b': '/data/shared_resources/models/gemma/gemma-7b'
 }
 
 
