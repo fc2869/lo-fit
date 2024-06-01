@@ -49,6 +49,7 @@ from honest_llama.truthfulqa.evaluate import format_frame, data_to_dict
 # from truthfulqa.evaluate import format_frame, data_to_dict
 ENGINE_MAP = {
     'llama_7B': 'baffo32/decapoda-research-llama-7B-hf', 
+    'llama2_7B': '/data/shared_resources/models/llama2/hf/llama-2-7b',
     'alpaca_7B': 'circulus/alpaca-7b', 
     'vicuna_7B': 'AlekseyKorshuk/vicuna-7b', 
     'llama2_chat_7B': '/data/shared_resources/models/llama2/hf/llama-2-7b-chat', 
@@ -537,7 +538,7 @@ def alt_tqa_evaluate(models, metric_names, input_path, output_path, summary_path
                 print(err)
 
         # llama
-        if mdl in ['llama_7B', 'alpaca_7B', 'vicuna_7B', 'llama2_chat_7B', 'llama2_chat_13B', 'llama2_chat_70B','gemma_7b','llama2_13B']: 
+        if mdl in ['llama_7B', 'alpaca_7B', 'vicuna_7B', 'llama2_chat_7B', 'llama2_chat_13B', 'llama2_chat_70B','gemma_7b','llama2_13B','llama2_7B']: 
 
             assert models[mdl] is not None, 'must provide llama model'
             llama_model = models[mdl]

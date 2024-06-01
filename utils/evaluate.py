@@ -77,7 +77,7 @@ def evaluate_clutrr(eval_dataset,model_name,model,tokenizer,fname,batch_size=16,
     return generated
 def evaluate_tqa(eval_dataset,fname,model,tokenizer,metrics,model_name=None,verbose=False):
     mnames = {
-        'llama2-7b-base': 'llama2_chat_7B',
+        'llama2-7b-base': 'llama2_7B',
         'llama2-13b-base': 'llama2_13B',
         'gemma-7b-base': 'gemma_7b',
         'llama2-7b-chat': 'llama2_chat_7B'
