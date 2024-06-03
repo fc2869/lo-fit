@@ -12,7 +12,9 @@ This paper provides code for the paper [LoFiT: Localized Fine-tuning on LLM Repr
 4. [How to Cite](#how-to-cite)
 
 ## Installation
-We suggest using Python 3.8.10. Before building the environment, please install the appropriate PyTorch version that corresponds to the hardware configurations (especially GPUs) of your machine here: https://pytorch.org/get-started/locally/
+We have tested using Python 3.8.10. Before building the environment, please install the appropriate PyTorch version that corresponds to the hardware configurations (especially GPUs) of your machine here: https://pytorch.org/get-started/locally/
+(Note: If you encounter errors like  ```RuntimeError: CUDA error: device kernel image is invalid``` at inference time when doing the evaluation, please check the PyTorch and CUDA driver version. We have tested on a single NVIDIA RTX A6000 GPU with 48G memory using PyTorch 2.2.2+cu121)
+
 Then, run the following.
 ```
 # Setup virtual environmnet
