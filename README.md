@@ -18,7 +18,7 @@ We have tested using Python 3.8.10. Before building the environment, please inst
 Then, run the following.
 ```
 # Setup virtual environmnet
-python3.8 -m venv "lofit"
+python3.8 -m venv lofit
 source lofit/bin/activate
 # install requirements
 pip install -r requirements.txt
@@ -34,6 +34,9 @@ We use TruthfulQA, MQuAKE, and CLUTRR to evaluate LoFiT. The pre-processing of t
 ## Train and Evaluate
 ### Setting up the models
 We currently support Gemma 7B, Llama 2-7B, and Llama 2-13B as base models to fine-tune. Paths to the huggingface checkpoints of these models should be defined in ```models_map``` in ```lofit_trainer.py``` before running any training or evaluation script. All fine-tuning experiments can be run on a single 48G GPU.
+
+We modified the above models with additional parameters as mentioned in the paper in ```models/modeling_llama.py``` and  ```models/modeling_gemma.py```. To initialize the modified model or load a trained checkpooint, we need to use the method ```LlamaForCausalLM.custom_from_pretrained(...)``` or  ```GemmaForCausalLM.custom_from_pretrained(...)``` in these two files to properly load the additional parameters.
+
 ### End-to-end training
 We provide an end-to-end script to run head selection, bias tuning, and final evaluation of LoFiT for each dataset in one line as ```train_script_{task}.sh```. For example, to fine-tune Llama 2-7B-base on TruthfulQA with LoFiT, please run the following:
 ```
