@@ -47,3 +47,16 @@ Specific hyperparameter configurations might be needed for different models and 
 We integrate the evaluation step and the training step into the end-to-end script mentioned above. The codes to evaluate LoFiT on TruthfulQA are adapted from the codebase of [Inference-time Intervention](https://github.com/likenneth/honest_llama). Details of evaluating LoFiT on MQuAKE and CLUTRR can be found in ```utils/evaluate.py```.
 
 ## How to Cite
+If you have any question regarding the code and our work, please feel free to reach out to Fangcong Yin (fangcongyin@utexas.edu).
+
+If you find our work useful, please consider citing us with the following format:
+```
+@misc{yin2024lofit,
+      title={LoFiT: Localized Fine-tuning on LLM Representations}, 
+      author={Fangcong Yin and Xi Ye and Greg Durrett},
+      year={2024},
+      eprint={2406.01563},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
