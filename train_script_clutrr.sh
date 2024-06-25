@@ -1,6 +1,6 @@
 #!/bin/bash
-## Uncomment the following to run experiments for: llama2-13b-base
-# model_name="llama2-13b-base";
+## Uncomment the following to run experiments for: llama2-llama2_13B-base
+# model_name="llama2-llama2_13B-base";
 # task="clutrr";
 # seed=42;
 # CUDA_VISIBLE_DEVICES=0 python lofit_trainer.py \
@@ -42,8 +42,8 @@
 #     --eval_batch 32 \
 #     --train_size 300 \
 #     --seed $seed;
-## Uncomment the following to run experiments for: llama2-7b-base
-model_name="llama2-7b-base";
+## Uncomment the following to run experiments for: llama2_7B
+model_name="llama2_7B";
 task="clutrr";
 seed=42;
 CUDA_VISIBLE_DEVICES=0 python lofit_trainer.py \
@@ -85,8 +85,8 @@ CUDA_VISIBLE_DEVICES=0 python lofit_trainer.py \
     --eval_batch 32 \
     --train_size 300 \
     --seed $seed;
-## Uncomment the following to run experiments for: Gemma-7b-base
-# model_name="gemma-7b-base";
+## Uncomment the following to run experiments for: gemma_7b
+# model_name="gemma_7b";
 # task="clutrr";
 # seed=42;
 # CUDA_VISIBLE_DEVICES=0 python lofit_trainer.py \

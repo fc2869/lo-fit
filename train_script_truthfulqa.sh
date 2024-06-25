@@ -1,5 +1,5 @@
-## Uncomment the following to run experiments for: Gemma-7b-base
-# model_name="gemma-7b-base";
+## Uncomment the following to run experiments for: gemma_7b
+# model_name="gemma_7b";
 # task="truthfulqa";
 # seed=42;
 # echo $model_name;
@@ -83,8 +83,8 @@
 #     --l1_lambda 0 \
 #     --eval_batch 32 \
 #     --seed $seed;
-## Uncomment the following to run experiments for: llama2-7b-base
-model_name="llama2-7b-base";
+## Uncomment the following to run experiments for: llama2_7B
+model_name="llama2_7B";
 task="truthfulqa";
 seed=42;
 echo $model_name;
@@ -168,8 +168,8 @@ CUDA_VISIBLE_DEVICES=0 python lofit_trainer.py \
     --l1_lambda 0 \
     --eval_batch 32 \
     --seed $seed;
-## Uncomment the following to run experiments for: llama2-13b-base
-# model_name="llama2-13b-base";
+## Uncomment the following to run experiments for: llama2_13B
+# model_name="llama2_13B";
 # task="truthfulqa";
 # seed=42;
 # echo $model_name;
