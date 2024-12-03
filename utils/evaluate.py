@@ -76,19 +76,13 @@ def evaluate_clutrr(eval_dataset,model_name,model,tokenizer,fname,batch_size=16,
     json.dump(result_json,open(results_dir,'w'))
     return generated
 def evaluate_tqa(eval_dataset,fname,model,tokenizer,metrics,model_name=None,verbose=False):
-    mnames = {
-        'llama2-7b-base': 'llama2_7B',
-        'llama2-13b-base': 'llama2_13B',
-        'gemma-7b-base': 'gemma_7b',
-        'llama2-7b-chat': 'llama2_chat_7B'
-    }
     ### Create directories to save truthfulqa outputs
     if not os.path.exists('./tqa_results/answer_dump'):
         os.makedirs('./tqa_results/answer_dump')
     if not os.path.exists('./tqa_results/summary_dump'):
         os.makedirs('./tqa_results/summary_dump')
     curr_fold_results = alt_tqa_evaluate(
-        {mnames[model_name]: model}, 
+        {model_name: model}, 
         metric_names=metrics,
         input_path=eval_dataset['data_dir'], 
         output_path=f'./tqa_results/answer_dump/{fname}.csv',
