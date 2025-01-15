@@ -46,6 +46,14 @@ Specific hyperparameter configurations might be needed for different models and 
 ### Evaluation
 We integrate the evaluation step and the training step into the end-to-end script mentioned above. The codes to evaluate LoFiT on TruthfulQA are adapted from the codebase of [Inference-time Intervention](https://github.com/likenneth/honest_llama). Details of evaluating LoFiT on MQuAKE and CLUTRR can be found in ```utils/evaluate.py```.
 
+**[Updated 01/15/2025]** We release the weights of fine-tuned models that integrate the tuned biases here:
+
+https://huggingface.co/fcyin/llama2_7B_base_lofit_mquake
+
+https://huggingface.co/fcyin/llama2_7B_base_lofit_truthfulqa
+
+You can use these weights and the code snippets included in the hugging face repo to run evaluations.
+
 ## How to Cite
 If you have any question regarding the code and our work, please feel free to reach out to Fangcong Yin (fangcongyin@utexas.edu).
 
